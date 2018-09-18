@@ -1,6 +1,6 @@
 # Laravel CRUD Application
 
-This is simple application for educational purposes only .
+The CRUD is a common feature in many applications . It has 4 basic operations you can perform on data (or a resource) .
 
 # Main features 
 
