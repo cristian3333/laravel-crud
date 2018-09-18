@@ -17,6 +17,10 @@ This is simple application for educational purposes only .
 
 ![screenshot_2018-09-18 laravel 1](https://user-images.githubusercontent.com/43368124/45689827-9589f880-bb5d-11e8-9e31-ba191395ebb3.png)
 
+* show product
+
+![screenshot_2018-09-18 laravel 4](https://user-images.githubusercontent.com/43368124/45690191-717ae700-bb5e-11e8-95c5-4f350b50a019.png)
+
 * Edit product
 
 ![screenshot_2018-09-18 laravel 2](https://user-images.githubusercontent.com/43368124/45689880-c1a57980-bb5d-11e8-9852-20c339cafa48.png)
