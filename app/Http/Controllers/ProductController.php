@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Product;
 use Illuminate\Http\Request;
+use DataTables;
 
 
 class ProductController extends Controller
@@ -19,8 +20,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-       $products = Product::get() ; 
-       return view('products.index' , compact('products')) ; 
+       // $products = Product::get() ; 
+       return view('products.index') ; 
+
     }
 
     /**
@@ -99,8 +101,6 @@ class ProductController extends Controller
         $product = Product::findOrFail($product) ;
         return view('products.delete' , compact('product')) ; 
     }
-
-
     /**
      * Remove the specified resource from storage.
      *
@@ -112,5 +112,13 @@ class ProductController extends Controller
         $product = Product::findOrFail($product) ;
         $product->delete();
         return redirect('/products');
+    }
+    function getdata()
+    {
+     $products = Product::select('id',  'product_name', 'price' , 'quantity');
+     return DataTables::of($products)
+     ->addColumn('actions', '<a href="show/{{$id}}">Show</a> | <a href="edit/{{$id}}">Edit</a> | <a href="delete/{{$id}}">Delete</a> <span class="glyphicon glyphicon-asterisk"></span> ')
+     ->rawColumns(['actions', 'action'])
+     ->make(true);
     }
 }
